@@ -204,24 +204,8 @@ export default function Home() {
                 className="glass-card glass-card-hover p-5 md:p-6 flex flex-col"
               >
                 <div className="flex items-start gap-4 mb-3">
-                  <div
-                    className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 overflow-hidden ${
-                      "iconImage" in project && project.iconImage
-                        ? "bg-transparent border border-white/10"
-                        : "bg-white/10 border border-white/10"
-                    }`}
-                  >
-                    {"iconImage" in project && project.iconImage ? (
-                      <Image
-                        src={project.iconImage}
-                        alt=""
-                        width={48}
-                        height={48}
-                        className="object-contain w-full h-full p-1.5 drop-shadow-[0_0_10px_rgba(0,0,0,0.35)]"
-                      />
-                    ) : (
-                      project.icon
-                    )}
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 overflow-hidden bg-white/10 border border-white/10">
+                    {project.icon}
                   </div>
                   <div className="min-w-0">
                     <h2 className="text-lg font-semibold text-white truncate">
