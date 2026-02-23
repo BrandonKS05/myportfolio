@@ -66,7 +66,7 @@ const projects = [
     description: "Take control of your browser by safely removing duplicate and inactive tabs in seconds.",
     visitUrl: "#",
     githubUrl: "#",
-    iconImage: "/tab-cleaner-icon.svg",
+    icon: "🧹",
   },
   {
     id: "2",
