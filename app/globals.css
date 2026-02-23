@@ -5,11 +5,11 @@
 :root {
   --gradient-bg: linear-gradient(
     -45deg,
-    #0f0a1a 0%,
-    #1a0a2e 25%,
-    #2d1b4e 50%,
-    #1a0a2e 75%,
-    #0f0a1a 100%
+    #0c1222 0%,
+    #0f172a 25%,
+    #0e7490 50%,
+    #0f172a 75%,
+    #0c1222 100%
   );
 }
 
@@ -22,18 +22,19 @@ body {
   overflow-x: hidden;
 }
 
-/* Animated gradient background */
+/* Animated gradient background - dark teal/navy, subtle movement, easy on the eyes */
 .gradient-bg {
   background: linear-gradient(
     -45deg,
-    #0f0a1a 0%,
-    #1a0a2e 25%,
-    #2d1b4e 50%,
-    #1f0d3a 75%,
-    #0f0a1a 100%
+    #020617 0%,
+    #0a1628 20%,
+    #0c4a6e 40%,
+    #134e4a 60%,
+    #0a1628 80%,
+    #020617 100%
   );
   background-size: 400% 400%;
-  animation: gradientShift 20s ease infinite;
+  animation: gradientShift 12s ease infinite;
 }
 
 @keyframes gradientShift {
