@@ -265,7 +265,6 @@ export default function Home() {
                 <li><strong className="text-white">Next.js</strong> — web applications</li>
                 <li><strong className="text-white">JavaScript / TypeScript</strong> — frontend and full-stack</li>
                 <li><strong className="text-white">Python</strong> — automation, experimentation, ML workflows</li>
-                <li><strong className="text-white">MongoDB & Redis</strong> — databases when needed</li>
               </ul>
             </div>
 
