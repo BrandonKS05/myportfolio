@@ -78,6 +78,16 @@ const projects = [
     githubUrl: "#",
     icon: "🎮",
   },
+  {
+    id: "3",
+    name: "Playerlister",
+    tech: "Next.js, Spotify API, TypeScript",
+    description: "Create Spotify playlists by genre with one click. Pick EDM, Hip-Hop, Pop, Rock, R&B, or K-Pop, or use shortcuts for your Top Tracks and Global Trending.",
+    visitUrl: "https://spotify-genre-playlister.vercel.app/",
+    githubUrl: "#",
+    icon: "🎵",
+    image: "/playerlister-card.png",
+  },
 ];
 
 export default function Home() {
@@ -205,7 +215,11 @@ export default function Home() {
               >
                 <div className="flex items-start gap-4 mb-3">
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 overflow-hidden bg-white/10 border border-white/10">
-                    {project.icon}
+                    {"image" in project && project.image ? (
+                      <Image src={project.image} alt="" width={48} height={48} className="object-cover w-full h-full" />
+                    ) : (
+                      project.icon
+                    )}
                   </div>
                   <div className="min-w-0">
                     <h2 className="text-lg font-semibold text-white truncate">
