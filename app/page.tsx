@@ -64,7 +64,7 @@ const projects = [
     name: "Tab Cleaner",
     tech: "Chrome Extension, JavaScript",
     description: "Take control of your browser by safely removing duplicate and inactive tabs in seconds.",
-    visitUrl: "#",
+    visitUrl: "https://chromewebstore.google.com/detail/tab-cleaner/oilganhcaffkkibecdfpombhdkgmglcj?authuser=0&hl=en",
     githubUrl: "#",
     icon: "🧹",
   },
