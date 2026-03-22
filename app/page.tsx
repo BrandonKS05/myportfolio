@@ -88,6 +88,17 @@ const projects = [
     icon: "🎵",
     image: "/playerlister-card.png",
   },
+  {
+    id: "4",
+    name: "Fastodo",
+    tech: "Azure, Web App",
+    description:
+      "Task manager with lists, calendar views, tags, priorities, and sorting—plan your day and stay organized.",
+    visitUrl: "https://taskmanager-brandonlee-etcpgrhwfudgcseu.westus3-01.azurewebsites.net",
+    githubUrl: "#",
+    icon: "✅",
+    image: "/fastodo-card.svg",
+  },
 ];
 
 export default function Home() {
