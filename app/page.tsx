@@ -60,6 +60,17 @@ const socialLinks = [
 
 const projects = [
   {
+    id: "5",
+    name: "GitTracker",
+    tech: "GitHub API, Web",
+    description:
+      "Explore GitHub as a living graph: trace pathways between users and repos, see how profiles and projects connect, and uncover collaborators and repositories you might never have found otherwise.",
+    visitUrl: "https://gittrack.brandonnlee.com",
+    githubUrl: "#",
+    icon: "🔗",
+    image: "/gittracker-card.svg",
+  },
+  {
     id: "1",
     name: "Tab Cleaner",
     tech: "Chrome Extension, JavaScript",
@@ -94,7 +105,7 @@ const projects = [
     tech: "Azure, Web App",
     description:
       "Task manager with lists, calendar views, tags, priorities, and sorting—plan your day and stay organized.",
-    visitUrl: "https://taskmanager-brandonlee-etcpgrhwfudgcseu.westus3-01.azurewebsites.net",
+    visitUrl: "https://taskmanager-brandonlee-etcpgrhwfudgcseu.westus3-01.azurewebsites.net/",
     githubUrl: "#",
     icon: "✅",
     image: "/fastodo-card.svg",
