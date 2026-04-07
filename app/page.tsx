@@ -92,6 +92,7 @@ const projects = [
     visitLabel: "GitHub",
     githubUrl: "https://github.com/BrandonKS05/pokemon-storage-api",
     icon: "⚡",
+    image: "/pokemon-storage-card.svg",
   },
   {
     id: "1",
