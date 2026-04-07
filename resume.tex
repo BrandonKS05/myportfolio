@@ -8,7 +8,6 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{ragged2e}
 \usepackage{microtype}
 
 % ---------------- Page Setup ----------------
@@ -19,44 +18,58 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-0.6in}
-\addtolength{\textheight}{1.2in}
+\addtolength{\textheight}{1.55in}
 
 \setlength{\tabcolsep}{0pt}
-\RaggedRight
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
 
 % ---------------- Section Formatting ----------------
 \titleformat{\section}
-  {\vspace{-6pt}\scshape\large}
-  {}{0em}{}[\titlerule \vspace{-2pt}]
+  {\vspace{-8pt}\scshape\large}
+  {}{0em}{}[\titlerule \vspace{-5pt}]
+\titlespacing*{\section}{0pt}{-2pt}{-10pt}
 
 % ---------------- Custom Commands ----------------
 \newcommand{\resumeItem}[1]{
-  \item {\fontsize{9}{11}\selectfont #1 \vspace{-2pt}}
+  \item {\fontsize{8.5}{10}\selectfont #1}
 }
 
 \newcommand{\resumeSubheading}[4]{
   \item
-  {\fontsize{10}{12}\selectfont
+  {\fontsize{9.5}{11}\selectfont
   \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{#1} & \textbf{#2} \\
     \textit{#3} & \textit{#4}
   \end{tabular*}}
-  \vspace{-8pt}
+  \vspace{-11pt}
 }
 
 \newcommand{\resumeItemListStart}{
-  \begin{itemize}[leftmargin=0.15in]
-  \vspace{-4pt}
+  \begin{itemize}[
+    leftmargin=0.15in,
+    itemsep=0.5pt,
+    topsep=0pt,
+    parsep=0pt,
+    partopsep=0pt
+  ]
 }
 \newcommand{\resumeItemListEnd}{
-  \end{itemize}\vspace{-6pt}
+  \end{itemize}\vspace{-9pt}
 }
 
 \newcommand{\resumeSectionStart}{
-  \begin{itemize}[leftmargin=0in, label={}]
+  \begin{itemize}[
+    leftmargin=0in,
+    label={},
+    itemsep=0pt,
+    topsep=0pt,
+    parsep=0pt,
+    partopsep=0pt
+  ]
 }
 \newcommand{\resumeSectionEnd}{
-  \end{itemize}\vspace{-6pt}
+  \end{itemize}\vspace{-10pt}
 }
 
 % ---------------- Document ----------------
@@ -64,32 +77,24 @@
 
 % ---------- Header ----------
 \begin{center}
-    {\fontsize{22}{24}\selectfont \textbf{Brandon Lee}} \\ \vspace{2pt}
-    \small \href{mailto:Jin.woo.lee@vanderbilt.edu}{Jin.woo.lee@vanderbilt.edu} $|$
+    {\fontsize{20}{22}\selectfont \textbf{Brandon Lee}} \\ \vspace{1pt}
+    \footnotesize \href{mailto:Jin.woo.lee@vanderbilt.edu}{Jin.woo.lee@vanderbilt.edu} $|$
     (203) 690--6524 $|$
-    \href{https://myportfolio-3jb7.vercel.app/}{brandonlee.dev}
-    \vspace{-8pt}
+    \href{https://www.brandonnlee.com/}{brandonlee.dev} $|$
+    \href{https://github.com/BrandonKS05}{github.com/BrandonKS05}
+    \vspace{-10pt}
 \end{center}
 
 % ---------- EDUCATION ----------
 \section{Education}
 \resumeSectionStart
-
   \resumeSubheading
     {Vanderbilt University}{Nashville, TN}
     {B.S. in Computer Science \& Mathematics}{Class of 2027}
   \resumeItemListStart
-    \resumeItem{GPA: 3.84}
-    \resumeItem{Relevant Coursework: Programming Design \& Data Structures, Discrete Structures, Partial Differential Equations, Computer Architecture, Intermediate Software Design}
+    \resumeItem{GPA: 3.86}
+    \resumeItem{Relevant Coursework: Programming Design \& Data Structures, Discrete Structures, Partial Differential Equations, Computer Architecture, Intermediate Software Design, Algorithms}
   \resumeItemListEnd
-
-  \resumeSubheading
-    {Hamilton High School}{Chandler, AZ}
-    {GPA: 3.98/4.00 \;|\; ACT: 35}{Class of 2023}
-  \resumeItemListStart
-    \resumeItem{Awards: Regeneron ISEF Finalist, 3$\times$ AIME Qualifier, USACO Gold Qualifier, National Merit Finalist}
-  \resumeItemListEnd
-
 \resumeSectionEnd
 
 % ---------- EXPERIENCE ----------
@@ -97,74 +102,73 @@
 \resumeSectionStart
 
   \resumeSubheading
-    {Language and Educational Analytics Research (LEAR) Lab}{Nashville, TN}
-    {Undergraduate Researcher}{September 2025 -- Present}
+    {iTELL.ai}{Nashville, TN}
+    {Software Developer}{September 2025 -- Present}
   \resumeItemListStart
-    \resumeItem{Fine-tuned a BERT-based model on domain-specific educational text, improving evaluation accuracy by 12\% over the baseline GPT-4o benchmark.}
-    \resumeItem{Developed an NLP pipeline for automatic cloze distractor generation using Ondov et al.'s contextuality scoring, min-max normalization, and SpaCy medium embeddings for semantic similarity.}
-    \resumeItem{Optimized distractor selection via exhaustive search over top-32 contextual candidates (4,960 sets), maximizing an energy function combining plausibility, incorrectness, and harmonic-mean distinctiveness.}
-    \resumeItem{Designed and managed a SQL database to store and query model evaluation results, enabling efficient filtering, aggregation, and reporting across large evaluation datasets.}
+    \resumeItem{Fine-tuned a BERT-based transformer model in Python using PyTorch and HuggingFace Transformers with tokenization on domain-specific educational text, improving evaluation accuracy by 12\% over the baseline GPT-4o benchmark}
+    \resumeItem{Engineered an end-to-end NLP pipeline for automatic cloze distractor generation leveraging SpaCy embeddings, semantic similarity scoring, min-max normalization, and contextuality metrics based on Ondov et al.}
+    \resumeItem{Optimized distractor selection via exhaustive search over top-32 contextual candidates (4,960 sets) with hyperparameter tuning to maximize a custom energy function combining plausibility, incorrectness, and harmonic-mean distinctiveness}
+    \resumeItem{Architected and managed a PostgreSQL database to store, query, and aggregate model evaluation results, enabling efficient filtering and reporting across large-scale datasets using SQL and Python scripting}
   \resumeItemListEnd
 
   \resumeSubheading
-    {Medical-image Analysis and Statistical Interpretation (MASI) Lab}{Nashville, TN}
-    {Undergraduate Researcher}{January 2025 - May 2025}
+    {ASML}{San Jose, CA}
+    {Software Engineer Intern}{June 2025 -- August 2025}
   \resumeItemListStart
-    \resumeItem{Preprocessed multi-contrast MRI scans (T1, T2, etc.) including resampling, normalization, and format conversion to prepare inputs for the super-resolution pipeline.}
-    \resumeItem{Ran deep learning-based super-resolution and image registration experiments across four tissue contrasts.}
-    \resumeItem{Executed Python/shell scripts to automate data processing and atlas generation workflows.}
+    \resumeItem{Built AutoAssure, an AI copilot using LangChain and RAG, cutting manual bug triage time by 65\% across 4 engineers by automating root cause analysis over 20,000+ Jira tickets and CI/CD logs using a retrieval-augmented generation pipeline}
+    \resumeItem{Engineered a vector similarity search pipeline with HuggingFace embeddings and ChromaDB, cutting root cause identification by 30\% and surfacing defects in 8 seconds vs. 45 minutes manually, validated against real Jira timestamps}
+    \resumeItem{Designed an LLM preprocessing pipeline for log cleaning, chunking, and embedding generation, ingesting test logs, Jira tickets, and CI/CD outputs to enable consistent sub-second retrieval at scale across large codebases}
+    \resumeItem{Reduced defect misclassification rate by 40\% during a 6-week rollout, validated against 50+ real production incidents and successfully adopted by 4 engineers on the QA team as part of their daily triage workflow}
   \resumeItemListEnd
-
 \resumeSectionEnd
 
 % ---------- PROJECTS ----------
 \section{Projects}
 \resumeSectionStart
   \resumeSubheading
-    {Tab Cleaner}{}
-    {Browser Extension}{JavaScript, Chrome Extensions API, HTML/CSS}
+    {GitTracker $|$ \href{https://gittrack.brandonnlee.com/}{\small gittrack.brandonnlee.com}}{}
+    {Full-Stack Web App}{Next.js, TypeScript, Tailwind CSS, Go, WebSockets, GitHub API}
   \resumeItemListStart
-    \resumeItem{Designed and shipped a production Manifest V3 Chrome extension using background service workers and event-driven architecture to manage real-time browser state across thousands of active tabs.}
-    \resumeItem{Implemented a rule-based tab management engine with URL normalization, duplicate detection, inactivity-based cleanup, and safety constraints preserving pinned and active sessions.}
-    \resumeItem{Built a persistent time-tracking system using the Chrome Storage API to compute per-tab focus duration, enabling accurate session analytics without a backend service.}
+    \resumeItem{Built a full-stack app that finds the shortest connection path between any two GitHub users using a bidirectional BFS algorithm implemented in Go with concurrent goroutines, optimizing traversal speed across large social graphs}
+    \resumeItem{Engineered real-time search visualization via WebSockets, streaming live graph traversal updates to a React frontend, allowing users to observe each step of the bidirectional BFS algorithm as it explores GitHub's social graph live}
+    \resumeItem{Designed a responsive dark-mode landing page with a custom SVG hub-and-spoke network diagram using SMIL animations and deterministic node placement to visualize GitHub user connection graphs intuitively}
   \resumeItemListEnd
-
   \resumeSubheading
-    {ValoPro}{}
-    {Automated Discord Bot}{Python, discord.py, AWS EC2}
+    {GoNeural $|$ \href{https://github.com/BrandonKS05/goneural}{\small goneural}}{}
+    {Machine Learning Library}{Go, Protocol Buffers, GitHub Actions}
   \resumeItemListStart
-    \resumeItem{Developed and deployed a production Discord bot integrating the VLR.gg API to provide real-time esports match data, serving thousands of users across multiple servers.}
-    \resumeItem{Implemented fully asynchronous command handling and non-blocking API requests using discord.py's async framework, ensuring low-latency responses even under high concurrency across thousands of simultaneous users.}
-    \resumeItem{Deployed on AWS EC2 with process supervision, secure environment-based configuration, and fault-tolerant restarts, maintaining reliable 24/7 uptime with zero manual intervention required.}
+    \resumeItem{Built a feedforward neural network library from scratch in Go with no ML framework dependencies, implementing backpropagation, MSE loss, and multiple optimizers (SGD, full-batch GD, and mini-batch GD) for end-to-end training}
+    \resumeItem{Designed plug-in per-layer activation functions (Sigmoid, ReLU, Identity) and neuroevolution support via Gaussian mutation and crossover operators for genetic-style manipulation of network weights and biases across layers}
+    \resumeItem{Implemented model persistence using Protocol Buffers to serialize and restore trained network weights, biases, layer configurations, and metadata, enabling full save and load functionality across independent training sessions}
   \resumeItemListEnd
-
   \resumeSubheading
-    {Spotify Genre Playlister}{}
-    {Full Stack Web App}{Next.js, TypeScript, Node.js, Spotify Web API, OAuth 2.0}
+    {Tab Cleaner $|$ \href{https://chromewebstore.google.com/detail/tab-cleaner/oilganhcaffkkibecdfpombhdkgmglcj}{\small tabcleaner.brandonnlee.com}}{}
+    {Browser Extension}{JavaScript, Chrome Extensions API, HTML/CSS, Manifest V3}
   \resumeItemListStart
-    \resumeItem{Designed and built an end-to-end playlist generation app that authenticates users via OAuth 2.0 authorization-code flow with token refresh, analyzes listening history, and auto-creates curated genre-based Spotify playlists.}
-    \resumeItem{Implemented secure server-side API routes to handle OAuth 2.0 authorization-code flow, access token storage, and automatic token refresh, ensuring all credentials and session state remain server-side and never exposed to the client.}
+    \resumeItem{Designed and shipped a production Manifest V3 Chrome extension using JavaScript, background service workers, and event-driven architecture to manage real-time browser state across thousands of active tabs simultaneously}
+    \resumeItem{Implemented a rule-based tab management engine with URL normalization, duplicate detection, inactivity-based cleanup, and safety constraints preserving pinned and active sessions to optimize runtime performance and memory efficiency}
+    \resumeItem{Built a persistent time-tracking system using the Chrome Storage API and asynchronous JavaScript to compute per-tab focus duration, delivering accurate session analytics and a responsive front-end UI/UX without any backend service}
   \resumeItemListEnd
-
 \resumeSectionEnd
 
 % ---------- SKILLS ----------
 \section{Skills}
-\begin{itemize}[leftmargin=0in, label={}]
-  \item {\fontsize{11}{13}\selectfont
-    \textbf{Languages}: Python, Java, JavaScript, TypeScript, C, Go, HTML/CSS, SQL
-  }\vspace{-6pt}
-  \item {\fontsize{11}{13}\selectfont
-    \textbf{Frameworks \& Libraries}: React, Next.js, Node.js, Express, React Native, PyTorch, NumPy, Pandas, SpaCy, TailwindCSS, Bootstrap, Flask, discord.py
-  }\vspace{-6pt}
-  \item {\fontsize{11}{13}\selectfont
-    \textbf{Databases}: PostgreSQL, SQLite, MongoDB, Firebase, Supabase, Redis
-  }\vspace{-6pt}
-  \item {\fontsize{11}{13}\selectfont
-    \textbf{Tools \& Platforms}: AWS (EC2), Docker, Git, GitHub, Linux (Ubuntu), Nginx, Vercel
-  }\vspace{-6pt}
-  \item {\fontsize{11}{13}\selectfont
-    \textbf{Other}: REST APIs, OAuth 2.0, CI/CD, UI/UX Design
+\begin{itemize}[
+  leftmargin=0in,
+  label={},
+  itemsep=0pt,
+  topsep=0pt,
+  parsep=0pt,
+  partopsep=0pt
+]
+  \item {\fontsize{8.5}{10}\selectfont
+    \textbf{Languages}: Python, Java, C++, JavaScript, TypeScript, C, Go, HTML/CSS, SQL, JSON, PowerShell
+  }\vspace{-7pt}
+  \item {\fontsize{8.5}{10}\selectfont
+    \textbf{Frameworks \& Libraries}: React, Next.js, Angular, Node.js, Express, Spring Boot, TailwindCSS, Bootstrap, Flask
+  }\vspace{-7pt}
+  \item {\fontsize{8.5}{10}\selectfont
+    \textbf{Other}: Azure, UNIX, macOS, Command Line, Nginx, Vercel, MongoDB, Redis, MySQL, SQLite, Firebase, Supabase, OAuth 2.0, systemd, Docker, Excel, SaaS
   }
 \end{itemize}
 

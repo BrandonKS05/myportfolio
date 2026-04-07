@@ -110,6 +110,28 @@ const projects = [
     icon: "✅",
     image: "/fastodo-card.svg",
   },
+  {
+    id: "6",
+    name: "goneural",
+    tech: "Go, Protocol Buffers, matrigo",
+    description:
+      "A lightweight neural network library you can drop into Go projects—no giant ML framework required. Train feedforward nets with backprop, pick your optimizer (SGD, mini-batch, or full batch), optionally evolve weights with genetic operators, and save or load models using Protocol Buffers.",
+    visitUrl: "https://github.com/BrandonKS05/goneural",
+    visitLabel: "GitHub",
+    githubUrl: "https://github.com/BrandonKS05/goneural",
+    icon: "🧠",
+  },
+  {
+    id: "7",
+    name: "Pokémon Storage API",
+    tech: ".NET 10, Entity Framework Core, PostgreSQL",
+    description:
+      "REST API for trainers, party lineups, and PC Boxes—swap Pokémon between party and storage with clear rules (party caps, ownership checks). Built with EF Core and PostgreSQL so the data model stays clean and easy to extend.",
+    visitUrl: "https://github.com/BrandonKS05/pokemon-storage-api",
+    visitLabel: "GitHub",
+    githubUrl: "https://github.com/BrandonKS05/pokemon-storage-api",
+    icon: "⚡",
+  },
 ];
 
 export default function Home() {
