@@ -80,6 +80,7 @@ const projects = [
     visitLabel: "GitHub",
     githubUrl: "https://github.com/BrandonKS05/goneural",
     icon: "🧠",
+    image: "/goneural-card.png",
   },
   {
     id: "7",
